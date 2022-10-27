@@ -1,8 +1,12 @@
-# polaris-file-explorer
-
-![GitHub package.json version](https://img.shields.io/github/package-json/v/ZyriabDsgn/polaris-file-explorer)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ZyriabDsgn/polaris-file-explorer)
-![GitHub license](https://img.shields.io/github/license/ZyriabDsgn/polaris-file-explorer)
+<p align="center"><img
+  src="https://www.wallenart.dev/src/images/pfx.svg"
+  alt="nouvell logo" /></p>
+ 
+ <p align="center">
+ <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/ZyriabDsgn/polaris-file-explorer">
+<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/zyriabdsgn/polaris-file-explorer">
+<img alt="GitHub" src="https://img.shields.io/github/license/zyriabdsgn/polaris-file-explorer">
+</p>
 
 File explorer made with Shopify's React library "Polaris", React hooks and Buckaroo (SDK)
 
