@@ -9,19 +9,20 @@ import FileExplorerPreviewCard, {
 import FileExplorerTopBar, {
   FileExplorerTopBarProps,
 } from '../../components/FileExplorerTopBar/FileExplorerTopBar';
-import { listBucketContent } from '../tools/buckaroo/queries.utils';
+import { listBucketContent } from '../buckaroo/utils/queries.utils';
 import {
   BucketObjectInfo,
   FileInput,
   BucketObject,
 } from '../../definitions/custom';
-import getDataType from '../tools/getDataType.utils';
 import getPathRelativeName from '../tools/getPathRelativeName.utils';
 import isDirectory from '../tools/isDirectory.utils';
 
 import './FileExplorer.css';
 
 interface useFileExplorerProps {
+  path: string;
+  fileType: string;
   onFileLoad: (args: {
     file: File;
     path: string;
@@ -53,9 +54,13 @@ export default function useFileExplorer(props: useFileExplorerProps) {
   }
 
   async function handleUpload(file: File) {
+    if (props.onUpload == null) {
+      return;
+    }
+
     const objInfo = {
       fileName: file.name,
-      path: [getDataType(), ...path].join('/'),
+      path: [props.path, ...path].join('/'),
       versionId:
         selectedFileId && Number.isNaN(+selectedFileId)
           ? selectedFileId
@@ -110,7 +115,7 @@ export default function useFileExplorer(props: useFileExplorerProps) {
       setIsFetchingObjects(true);
 
       const token = await getAccessTokenSilently();
-      const files = await listBucketContent({ token });
+      const files = await listBucketContent({ token, path: props.path });
 
       setIsFetchingObjects(false);
 
@@ -125,7 +130,7 @@ export default function useFileExplorer(props: useFileExplorerProps) {
         e?.target.files ? await handleUpload(e.target.files[0]) : undefined
       }
       type="file"
-      accept="text/csv"
+      accept={props.fileType}
       className="display-none"
       title="Files explorer file upload"
     />
