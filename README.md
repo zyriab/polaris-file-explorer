@@ -8,7 +8,7 @@ File explorer made with Shopify's React library "Polaris", React hooks and Bucka
 
 ## Installation
 
-Until a NPM package is made available, you need to download this repo's content and include it in your frontend folders (you can ommit the packages\*.json).  
+Until a NPM package is made available, you need to download this repo's content and include the files inside the `src` folder in your frontend folders.  
 For example, you can put the files in `your_project/src/utils/pfx/`.
 
 **Note**: This implementation makes use of Auth0, but I'd like to let the user (dev) choose in future versions. At the moment, you need to wrap your application in Auth0 `AuthProvider` component in order for it to work.
