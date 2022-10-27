@@ -20,7 +20,7 @@ import formatPath from '../../utils/tools/formatPath.utils';
 import formatBytes from '../../utils/tools/formatBytes.utils';
 import isDirectory from '../../utils/tools/isDirectory.utils';
 import getDifferences from '../../utils/tools/getDifferences.utils';
-import getFileContent from '../../utils/tools/buckaroo/getFileContent.utils';
+import getCSVFileContent from '../../utils/buckaroo/getCSVFileContent';
 import { RowData, FileInput, BucketObject, BucketObjectVersion } from '../../definitions/custom';
 
 import './FileExplorerPreviewCard.css';
@@ -73,10 +73,10 @@ export default function FileExplorerPreviewCard(
       versionId: selectedObject.id,
     };
 
-    selectedObject.content = await getFileContent(args);
+    selectedObject.content = await getCSVFileContent(args);
 
     if (selectedVersionObject != null) {
-      selectedVersionObject.content = await getFileContent({
+      selectedVersionObject.content = await getCSVFileContent({
         ...args,
         versionId: selectedVersionObject.id,
       });
