@@ -2,59 +2,42 @@
   "name": "polaris-file-explorer",
   "version": "0.1.0",
   "private": false,
-  "author": "Arthur Wallendorff (ZyriabDsgn)",
+  "author": "Arthur Wallendorff - Metaoist Dsgn",
   "license": "ISC",
   "homepage": "https://github.com/ZyriabDsgn/polaris-file-explorer#readme",
   "bug": {
-	  "url": "https://github.com/ZyriabDsgn/polaris-file-explorer/issues"
+    "url": "https://github.com/ZyriabDsgn/polaris-file-explorer/issues"
   },
   "repository": {
-	  "type": "git",
-	  "url": "git+https://github.com/ZyriabDsgn/polaris-file-explorer.git"
+    "type": "git",
+    "url": "git+https://github.com/ZyriabDsgn/polaris-file-explorer.git"
   },
   "keywords": [
-	"react",
-	"typescript",
-	"polaris",
-	"shopify",
-	"file explorer"
+    "react",
+    "typescript",
+    "polaris",
+    "shopify",
+    "file explorer"
   ],
   "main": "dist/FileExplorer.js",
   "module": "dist/FileExplorer.js",
   "files": [
-	"dist",
-	"README.md"
+    "dist",
+    "README.md"
   ],
   "dependencies": {
     "@auth0/auth0-react": "^1.11.0",
     "@shopify/polaris": "^10.4.1",
     "@shopify/polaris-icons": "^6.4.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.11.64",
-    "@types/normalize-path": "^3.0.0",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
     "normalize-path": "^3.0.0",
     "papaparse": "^5.3.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
     "react-i18next": "^11.18.6",
-    "react-scripts": "5.0.0",
     "typescript": "^4.8.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-	"publish:npm": "rm -rf dist && mkdir dist && babel ./src/components -d dist --copy-files",
-	"publish:npm:win": "(if exist dist rmdir /s /q dist) && mkdir dist && babel ./src/components -d dist --copy-files"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "publish:npm": "rm -rf dist && mkdir dist && babel ./src/components -d dist --copy-files",
+    "publish:npm:win": "(if exist dist rmdir /s /q dist) && mkdir dist && babel ./src/components -d dist --copy-files"
   },
   "browserslist": {
     "production": [
@@ -68,13 +51,10 @@
       "last 1 safari version"
     ]
   },
-   "babel": {
-    "presets": [
-      "@babel/preset-react"
-    ]
-  },
   "devDependencies": {
-    "@babel/cli": "^7.19.3",
-    "@babel/preset-react": "^7.18.6"
+    "@types/node": "^16.11.64",
+    "@types/normalize-path": "^3.0.0",
+    "@types/papaparse": "^5.3.5",
+    "@types/react": "^18.0.21"
   }
 }
