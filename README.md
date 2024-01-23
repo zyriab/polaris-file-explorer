@@ -1,5 +1,5 @@
 <p align="center"><img
-  src="https://www.wallenart.dev/src/images/pfx.svg"
+  src="logo.svg"
   alt="nouvell logo" /></p>
  
  <p align="center">
